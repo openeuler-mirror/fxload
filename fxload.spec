@@ -1,10 +1,10 @@
 Name:    fxload
 Version: 2008_10_13
-Release: 15
+Release: 16
 Summary: A program which downloads firmware to USB devices
 License: GPLv2+
 URL:     http://linux-hotplug.sourceforge.net/
-Source0: https://netix.dl.sourceforge.net/projects/linux-hotplug/fxload/2008_10_13/%{name}-%{version}.tar.gz
+Source0: https://netix.dl.sourceforge.net/project/linux-hotplug/fxload/2008_10_13/%{name}-%{version}.tar.gz
 
 BuildRequires: git
 Requires:      udev
@@ -41,6 +41,9 @@ install -D -m 644 fxload.8 %{buildroot}/%{_mandir}/man8/fxload.8
 %{_mandir}/*/*
 
 %changelog
+* Thu Sep 3 2020 lihaotian<lihaotian9@huawei.com> - 2008_10_13-16
+- Fix source0 url
+
 * Wed Sep 2 2020 lihaotian<lihaotian9@huawei.com> - 2008_10_13-15
 - Update source0 url.
 
