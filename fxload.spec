@@ -1,6 +1,6 @@
 Name:    fxload
 Version: 2008_10_13
-Release: 19
+Release: 20
 Summary: A program which downloads firmware to USB devices
 License: GPLv2+
 URL:     http://linux-hotplug.sourceforge.net/
@@ -26,7 +26,7 @@ This contains man files for the using of fxload.
 %autosetup -n %{name}-%{version} -p1
 
 %build
-make CC=gcc CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="$RPM_LD_FLAGS"
+make CC=$CC CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="$RPM_LD_FLAGS"
 
 %install
 install -D -m 755 fxload %{buildroot}/sbin/fxload
@@ -41,6 +41,9 @@ install -D -m 644 fxload.8 %{buildroot}/%{_mandir}/man8/fxload.8
 %{_mandir}/*/*
 
 %changelog
+* Thu Apr 13 2023 SaltyFruit <saltyfruit255@gmail.com> - 2008_10_13-20
+- Fix CC compiler support
+
 * Thu May 19 2022 chengwenzhe <chengwenzhe@uniontech.com> - 2008_10_13-19
 - fix spec changelog date time
 
